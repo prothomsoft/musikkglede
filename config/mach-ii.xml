@@ -138,6 +138,7 @@
         	<notify listener="AlfaListener" method="findLatest" />
         	<view-page name="carouselView" contentKey="carouselView" />
         	<view-page name="productCategoriesView" contentKey="productCategoriesView" />
+        	<view-page name="searchView" contentKey="searchView" />
         	<view-page name="navigationView" contentKey="navigationView" />
         	<view-page name="footerView" contentKey="footerView" />
            	<view-page name="template4" />
@@ -242,6 +243,26 @@
         	<view-page name="navigationView" contentKey="navigationView" />
         	<view-page name="nproductsView" contentKey="nproductsView" />
         	<view-page name="footerView" contentKey="footerView" />
+        	<view-page name="searchView" contentKey="searchView" />
+        	<view-page name="template4" />
+        </event-handler>
+        
+        <event-handler event="product">
+        	<notify listener="RightsListener" method="getAllowedEventsList" />
+        	<view-page name="navigationView" contentKey="navigationView" />
+        	<view-page name="nproductView" contentKey="nproductView" />
+        	<view-page name="footerView" contentKey="footerView" />
+        	<view-page name="searchView" contentKey="searchView" />
+        	<view-page name="template4" />
+        </event-handler>
+        
+        
+        <event-handler event="shopping_cart">
+        	<notify listener="RightsListener" method="getAllowedEventsList" />
+        	<view-page name="navigationView" contentKey="navigationView" />
+        	<view-page name="nShoppingCartView" contentKey="nShoppingCartView" />
+        	<view-page name="footerView" contentKey="footerView" />
+        	<view-page name="searchView" contentKey="searchView" />
         	<view-page name="template4" />
         </event-handler>
         
@@ -365,6 +386,7 @@
         	<view-page name="carouselView" contentKey="carouselView" />
         	<view-page name="navigationView" contentKey="navigationView" />
         	<view-page name="footerView" contentKey="footerView" />
+        	<view-page name="searchView" contentKey="searchView" />
         	<view-page name="template4" />
         </event-handler>
         
@@ -1074,6 +1096,8 @@
     	<page-view name="responseJSON" page="/views/front/!general/responseJSON.php"/>
     	<page-view name="documentReadyScript" page="/views/front/!general/documentReadyScript.php"/>
     	<page-view name="footerView" page="/views/front/!general/footerView.php"/>
+    	<page-view name="searchView" page="/views/front/!general/searchView.php"/>
+    	
     	
     	
     	
@@ -1111,8 +1135,12 @@
     			   	
     	<!-- PRODUCTS -->
     	<page-view name="nproductsView" page="/views/front/product/nproductsView.php"/>
+    	<page-view name="nproductView" page="/views/front/product/nproductView.php"/>
     	<page-view name="productView" page="/views/front/product/productView.php"/>
     	<page-view name="productCategoriesView" page="/views/front/product/productCategoriesView.php"/>
+    	
+    	<!-- SHOPPINGCART -->
+    	<page-view name="nShoppingCartView" page="/views/front/shoppingcart/nShoppingCartView.php"/>
     	
     	<!-- SEARCHRESULTS -->
     	<page-view name="searchResultsView" page="/views/front/searchresults/searchResultsView.php"/>
@@ -1122,7 +1150,6 @@
     	
     	<!-- BOXES -->
     	<page-view name="categoriesView" page="/views/front/boxes/categoriesView.php"/>
-    	<page-view name="searchView" page="/views/front/boxes/searchView.php"/>
     	<page-view name="newsletterView" page="/views/front/boxes/newsletterView.php"/>
     	<page-view name="navigationTopView" page="/views/front/boxes/navigationTopView.php"/>
     	<page-view name="bestView" page="/views/front/boxes/bestView.php"/>

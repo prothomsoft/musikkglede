@@ -52,6 +52,8 @@ class EventsAllowedForEveryone {
 	  pomoc,
 	  wyniki_wyszukiwania,
 	  products,
+	  product,
+	  shopping_cart,
 	  produkty,
 	  produkt,
 	  activation,

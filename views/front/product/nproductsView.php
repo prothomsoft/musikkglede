@@ -76,8 +76,8 @@ $SN = $objAppSession->getSession('SN');
 								      <img src="<?=$SN?>images/instuments/piano.jpg">
 								      <div class="category_caption_footer">
 								        <p>850.00 NOK</p>
-								        <div class="padding_help"><a href="#" class="btn btn-default width_help" role="button">Les mer</a></div>
-								        <div><a href="#" class="btn btn-default width_help" role="button">Legg i Handlekurven</a></div>
+								        <div class="padding_help"><a href="<?=$SN?>product.html" class="btn btn-default width_help" role="button">Les mer</a></div>
+								        <div><a href="<?=$SN?>shopping_cart.html" class="btn btn-default width_help" role="button">Legg i Handlekurven</a></div>
 								      </div>
 							    </div>
 		                    </div>
@@ -89,8 +89,8 @@ $SN = $objAppSession->getSession('SN');
 								      <img src="<?=$SN?>images/instuments/piano.jpg">
 								      <div class="category_caption_footer">
 								        <p>350.00 NOK</p>
-								        <div class="padding_help"><a href="#" class="btn btn-default width_help" role="button">Les mer</a></div>
-								        <div><a href="#" class="btn btn-default width_help" role="button">Legg i Handlekurven</a></div>
+								        <div class="padding_help"><a href="<?=$SN?>product.html" class="btn btn-default width_help" role="button">Les mer</a></div>
+								        <div><a href="<?=$SN?>shopping_cart.html" class="btn btn-default width_help" role="button">Legg i Handlekurven</a></div>
 								      </div>
 							    </div>
 		                    </div>
@@ -102,8 +102,8 @@ $SN = $objAppSession->getSession('SN');
 								      <img src="<?=$SN?>images/instuments/piano.jpg">
 								      <div class="category_caption_footer">
 								        <p>3595.00 NOK</p>
-								        <div class="padding_help"><a href="#" class="btn btn-default width_help" role="button">Les mer</a></div>
-								        <div><a href="#" class="btn btn-default width_help" role="button">Legg i Handlekurven</a></div>
+								        <div class="padding_help"><a href="<?=$SN?>product.html" class="btn btn-default width_help" role="button">Les mer</a></div>
+								        <div><a href="<?=$SN?>shopping_cart.html" class="btn btn-default width_help" role="button">Legg i Handlekurven</a></div>
 								      </div>
 							    </div>
 		                    </div>
@@ -115,8 +115,8 @@ $SN = $objAppSession->getSession('SN');
 								      <img src="<?=$SN?>images/instuments/piano.jpg">
 								      <div class="category_caption_footer">
 								        <p>850.00 NOK</p>
-								        <div class="padding_help"><a href="#" class="btn btn-default width_help" role="button">Les mer</a></div>
-								        <div><a href="#" class="btn btn-default width_help" role="button">Legg i Handlekurven</a></div>
+								        <div class="padding_help"><a href="<?=$SN?>product.html" class="btn btn-default width_help" role="button">Les mer</a></div>
+								        <div><a href="<?=$SN?>shopping_cart.html" class="btn btn-default width_help" role="button">Legg i Handlekurven</a></div>
 								      </div>
 							    </div>
 		                    </div>
@@ -128,8 +128,8 @@ $SN = $objAppSession->getSession('SN');
 								      <img src="<?=$SN?>images/instuments/piano.jpg">
 								      <div class="category_caption_footer">
 								        <p>350.00 NOK</p>
-								        <div class="padding_help"><a href="#" class="btn btn-default width_help" role="button">Les mer</a></div>
-								        <div><a href="#" class="btn btn-default width_help" role="button">Legg i Handlekurven</a></div>
+								        <div class="padding_help"><a href="<?=$SN?>product.html" class="btn btn-default width_help" role="button">Les mer</a></div>
+								        <div><a href="<?=$SN?>shopping_cart.html" class="btn btn-default width_help" role="button">Legg i Handlekurven</a></div>
 								      </div>
 							    </div>
 		                    </div>
@@ -141,8 +141,8 @@ $SN = $objAppSession->getSession('SN');
 								      <img src="<?=$SN?>images/instuments/piano.jpg">
 								      <div class="category_caption_footer">
 								        <p>3595.00 NOK</p>
-								        <div class="padding_help"><a href="#" class="btn btn-default width_help" role="button">Les mer</a></div>
-								        <div><a href="#" class="btn btn-default width_help" role="button">Legg i Handlekurven</a></div>
+								        <div class="padding_help"><a href="<?=$SN?>product.html" class="btn btn-default width_help" role="button">Les mer</a></div>
+								        <div><a href="<?=$SN?>shopping_cart.html" class="btn btn-default width_help" role="button">Legg i Handlekurven</a></div>
 								      </div>
 							    </div>
 		                    </div>
@@ -154,8 +154,8 @@ $SN = $objAppSession->getSession('SN');
 								      <img src="<?=$SN?>images/instuments/piano.jpg">
 								      <div class="category_caption_footer">
 								        <p>850.00 NOK</p>
-								        <div class="padding_help"><a href="#" class="btn btn-default width_help" role="button">Les mer</a></div>
-								        <div><a href="#" class="btn btn-default width_help" role="button">Legg i Handlekurven</a></div>
+								        <div class="padding_help"><a href="<?=$SN?>product.html" class="btn btn-default width_help" role="button">Les mer</a></div>
+								        <div><a href="<?=$SN?>shopping_cart.html" class="btn btn-default width_help" role="button">Legg i Handlekurven</a></div>
 								      </div>
 							    </div>
 		                    </div>
@@ -167,8 +167,8 @@ $SN = $objAppSession->getSession('SN');
 								      <img src="<?=$SN?>images/instuments/piano.jpg">
 								      <div class="category_caption_footer">
 								        <p>350.00 NOK</p>
-								        <div class="padding_help"><a href="#" class="btn btn-default width_help" role="button">Les mer</a></div>
-								        <div><a href="#" class="btn btn-default width_help" role="button">Legg i Handlekurven</a></div>
+								        <div class="padding_help"><a href="<?=$SN?>product.html" class="btn btn-default width_help" role="button">Les mer</a></div>
+								        <div><a href="<?=$SN?>shopping_cart.html" class="btn btn-default width_help" role="button">Legg i Handlekurven</a></div>
 								      </div>
 							    </div>
 		                    </div>
@@ -180,8 +180,8 @@ $SN = $objAppSession->getSession('SN');
 								      <img src="<?=$SN?>images/instuments/piano.jpg">
 								      <div class="category_caption_footer">
 								        <p>3595.00 NOK</p>
-								        <div class="padding_help"><a href="#" class="btn btn-default width_help" role="button">Les mer</a></div>
-								        <div><a href="#" class="btn btn-default width_help" role="button">Legg i Handlekurven</a></div>
+								        <div class="padding_help"><a href="<?=$SN?>product.html" class="btn btn-default width_help" role="button">Les mer</a></div>
+								        <div><a href="<?=$SN?>shopping_cart.html" class="btn btn-default width_help" role="button">Legg i Handlekurven</a></div>
 								      </div>
 							    </div>
 		                    </div>
