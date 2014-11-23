@@ -13,16 +13,6 @@ $oT = new Translator('template3',$sLang);
 		        <footer>
 		            <div class="upper-foot">
 						<div class="row">
-							<div class="col-xs-6 col-sm-3">
-								<h2>Contact detail</h2>
-								<address>
-									<i class="fa fa-map-marker"></i> No.123 Pellentesque nec erat.<br>
-									Aenean semper, neque non faucibus.<br>
-									<i class="fa fa-phone"></i> Phone. (123) 456-7890<br>
-									<i class="fa fa-fax"></i> Fax. (123) 456-7890<br>
-									<i class="fa fa-envelope"></i> E-mail. <a href="mailto:#">first.last@example.com</a>
-								</address>
-							</div>
 							<div class="col-xs-6 col-sm-6">
 								<h2>Categories</h2>
 								<ul class="list-inline tagclouds">
@@ -42,6 +32,16 @@ $oT = new Translator('template3',$sLang);
 									<li><a href="<?=$SN?>products.html">Gavekort</a></li>
 									<li><a href="<?=$SN?>products.html">Diverse</a></li>
 								</ul>									
+							</div>
+							<div class="col-xs-6 col-sm-3">
+								<h2>Contact detail</h2>
+								<address>
+									<i class="fa fa-map-marker"></i> No.123 Pellentesque nec erat.<br>
+									Aenean semper, neque non faucibus.<br>
+									<i class="fa fa-phone"></i> Phone. (123) 456-7890<br>
+									<i class="fa fa-fax"></i> Fax. (123) 456-7890<br>
+									<i class="fa fa-envelope"></i> E-mail. <a href="mailto:#">first.last@example.com</a>
+								</address>
 							</div>
 							<div class="col-xs-6 col-sm-3">
 								<h2>Don’t miss out</h2>

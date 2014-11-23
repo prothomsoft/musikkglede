@@ -9,7 +9,7 @@ $SN = $objAppSession->getSession('SN');
             <div class="container">
                 <div class="row">
                 	<!-- .shop-navbar -->
-                    <div class="col-md-3">
+                    <div class="col-md-3 hidden-xs hidden-sm">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="widget-box sidebar">                                    
@@ -63,12 +63,12 @@ $SN = $objAppSession->getSession('SN');
                                 </div>
                             </div>                                                   
                         </div>
-                    </div>
-                                        
+                    </div>                                        
                     <!--/.shop-navbar-->
+                    
                     <div class="col-md-9">
                         <div class="row">
-                            <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4">
 		                        <div class="thumbnail">
 								      <div class="category_caption_header vertical-align">
 										 <div class="width_help">Casio Keyboard SA-77 44 minitangenter</div>							        
@@ -81,7 +81,7 @@ $SN = $objAppSession->getSession('SN');
 								      </div>
 							    </div>
 		                    </div>
-		                    <div class="col-sm-4 col-lg-4 col-md-4">
+		                    <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4">
 		                        <div class="thumbnail">
 								      <div class="category_caption_header vertical-align">
 										 <div class="width_help">Kalimba B5</div>							        
@@ -94,7 +94,7 @@ $SN = $objAppSession->getSession('SN');
 								      </div>
 							    </div>
 		                    </div>
-		                    <div class="col-sm-4 col-lg-4 col-md-4">
+		                    <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4">
 		                        <div class="thumbnail">
 								      <div class="category_caption_header vertical-align">
 										 <div class="width_help">Casio Digitalpiano CDP-120 inkl. CS44</div>							        
@@ -107,7 +107,7 @@ $SN = $objAppSession->getSession('SN');
 								      </div>
 							    </div>
 		                    </div>
-		                    <div class="col-sm-4 col-lg-4 col-md-4">
+		                    <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4">
 		                        <div class="thumbnail">
 								      <div class="category_caption_header vertical-align">
 										 <div class="width_help">Casio Keyboard SA-77 44 minitangenter</div>							        
@@ -120,7 +120,7 @@ $SN = $objAppSession->getSession('SN');
 								      </div>
 							    </div>
 		                    </div>
-		                    <div class="col-sm-4 col-lg-4 col-md-4">
+		                    <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4">
 		                        <div class="thumbnail">
 								      <div class="category_caption_header vertical-align">
 										 <div class="width_help">Kalimba B5</div>							        
@@ -133,7 +133,7 @@ $SN = $objAppSession->getSession('SN');
 								      </div>
 							    </div>
 		                    </div>
-		                    <div class="col-sm-4 col-lg-4 col-md-4">
+		                    <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4">
 		                        <div class="thumbnail">
 								      <div class="category_caption_header vertical-align">
 										 <div class="width_help">Casio Digitalpiano CDP-120 inkl. CS44</div>							        
@@ -146,7 +146,7 @@ $SN = $objAppSession->getSession('SN');
 								      </div>
 							    </div>
 		                    </div>
-		                    <div class="col-sm-4 col-lg-4 col-md-4">
+		                    <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4">
 		                        <div class="thumbnail">
 								      <div class="category_caption_header vertical-align">
 										 <div class="width_help">Casio Keyboard SA-77 44 minitangenter</div>							        
@@ -159,7 +159,7 @@ $SN = $objAppSession->getSession('SN');
 								      </div>
 							    </div>
 		                    </div>
-		                    <div class="col-sm-4 col-lg-4 col-md-4">
+		                    <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4">
 		                        <div class="thumbnail">
 								      <div class="category_caption_header vertical-align">
 										 <div class="width_help">Kalimba B5</div>							        
@@ -172,7 +172,7 @@ $SN = $objAppSession->getSession('SN');
 								      </div>
 							    </div>
 		                    </div>
-		                    <div class="col-sm-4 col-lg-4 col-md-4">
+		                    <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4">
 		                        <div class="thumbnail">
 								      <div class="category_caption_header vertical-align">
 										 <div class="width_help">Casio Digitalpiano CDP-120 inkl. CS44</div>							        

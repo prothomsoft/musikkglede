@@ -20,7 +20,7 @@ $oT = new Translator('template3',$sLang);
 						</button>
 						<a class="logo" href="<?=$SN?>musikkglede.html"><img src="<?=$SN?>images/musikkglede_logo.jpg" alt="Musikkglede"></a>
 					</div>
-					<ul class="nav navbar-nav navbar-nav navbar-right">
+					<ul class="nav navbar-nav navbar-nav navbar-right hidden-xs hidden-sm">
 						<li class="search">
 							<a href="javascript:void(0);" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-search"></i></a>
 						</li>
