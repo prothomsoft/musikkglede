@@ -13,7 +13,7 @@ $oT = new Translator('template3',$sLang);
 		        <footer>
 		            <div class="upper-foot">
 						<div class="row">
-							<div class="col-xs-6 col-sm-6">
+							<div class="col-xs-6 col-sm-6 col-md-6">
 								<h2>Categories</h2>
 								<ul class="list-inline tagclouds">
 									<li><a href="<?=$SN?>products.html">Dans</a></li>
@@ -33,7 +33,7 @@ $oT = new Translator('template3',$sLang);
 									<li><a href="<?=$SN?>products.html">Diverse</a></li>
 								</ul>									
 							</div>
-							<div class="col-xs-6 col-sm-3">
+							<div class="col-xs-6 col-sm-6 col-md-3">
 								<h2>Contact detail</h2>
 								<address>
 									<i class="fa fa-map-marker"></i> No.123 Pellentesque nec erat.<br>
@@ -43,7 +43,7 @@ $oT = new Translator('template3',$sLang);
 									<i class="fa fa-envelope"></i> E-mail. <a href="mailto:#">first.last@example.com</a>
 								</address>
 							</div>
-							<div class="col-xs-6 col-sm-3">
+							<div class="col-xs-6 col-sm-6 col-md-3">
 								<h2>Don’t miss out</h2>
 								<p>In venenatis neque a eros laoreet eu placerat erat suscipit. Fusce cursus, erat ut scelerisque.</p>
 								<form class="form-inline form-newsletter" role="form">
