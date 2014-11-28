@@ -125,9 +125,7 @@
         
         <!-- START --> <!-- START --> <!-- START -->
         <event-handler event="musikkglede">
-        	<notify listener="RightsListener" method="getAllowedEventsList" />
-        	<view-page name="dialogContact" contentKey="dialogContact" />
-        	<view-page name="dialogContactConfirm" contentKey="dialogContactConfirm" />
+        	<notify listener="RightsListener" method="getAllowedEventsList" />        	
         	<view-page name="dialogLogin" contentKey="dialogLogin" />
         	<notify listener="SigmaListener" method="findLatest" />
         	<notify listener="SigmaListener" method="getQueue" />
@@ -153,20 +151,17 @@
         <!-- CMS --> <!-- CMS --> <!-- CMS -->
         <event-handler event="musikkglede_page" access="public">
         	<notify listener="RightsListener" method="getAllowedEventsList" />
-        	<view-page name="dialogContact" contentKey="dialogContact" />
-        	<view-page name="dialogContactConfirm" contentKey="dialogContactConfirm" />
         	<view-page name="dialogLogin" contentKey="dialogLogin" />
         	<notify listener="AlfaListener" method="findLatest" />
         	<notify listener="CmsContentListener" method="findByItemSeo" />
         	<notify listener="CmsContentPictureListener" method="getByCmsContentObjAndId" />
         	<notify listener="ProductListener" method="findAllHomePage" />
         	<notify listener="DeltaListener" method="findAll" />
-        	<view-page name="searchView" contentKey="searchView" />
-        	<view-page name="bestView" contentKey="bestView" />
-        	<view-page name="cmsCategoriesView" contentKey="cmsCategoriesView" />
+        	<view-page name="carouselView" contentKey="carouselView" />
+        	<view-page name="navigationView" contentKey="navigationView" />
         	<view-page name="cmsView" contentKey="cmsView" />
-        	<view-page name="documentReadyScript" contentKey="documentReadyScript" />
-           	<view-page name="template3" />
+        	<view-page name="footerView" contentKey="footerView" />
+           	<view-page name="template4" />        	
         </event-handler>
         <!-- CMS --> <!-- CMS --> <!-- CMS -->
         
@@ -953,34 +948,20 @@
         </event-handler>
         <!-- ARTICLES --> <!-- ARTICLES --> <!-- ARTICLES -->
         
-        
-        
         <!-- CONTACT --> <!-- CONTACT --> <!-- CONTACT -->
         <event-handler event="contact_form" access="public">
         	<notify listener="RightsListener" method="getAllowedEventsList" />
-        	<view-page name="dialogRegistration" contentKey="dialogRegistration" />
-        	<view-page name="dialogRegistrationConfirm" contentKey="dialogRegistrationConfirm" />
-        	<view-page name="dialogForgotPassword" contentKey="dialogForgotPassword" />
-        	<view-page name="dialogForgotPasswordConfirm" contentKey="dialogForgotPasswordConfirm" />
-        	<view-page name="dialogContact" contentKey="dialogContact" />
-        	<view-page name="dialogContactConfirm" contentKey="dialogContactConfirm" />
-        	<view-page name="dialogSamples" contentKey="dialogSamples" />
-        	<view-page name="dialogSamplesConfirm" contentKey="dialogSamplesConfirm" />
         	<view-page name="dialogLogin" contentKey="dialogLogin" />
-        	<notify listener="ProductCategoryPlainListener" method="findAllAsc" />
-        	<notify listener="CmsCategoryPlainListener" method="findAllAsc" />
-        	<notify listener="CmsContentListener" method="findByItemSeo" />
-        	<notify listener="ProductListener" method="findAllHomePage" />
-        	<notify listener="DeltaListener" method="findAll" />
-        	<notify listener="AlfaListener" method="findLatest" />
         	<view-page name="bestView" contentKey="bestView" />
         	<view-page name="navigationTopView" contentKey="navigationTopView" />
-        	<view-page name="contactFormView" contentKey="contactFormView" />
+        	<view-page name="navigationView" contentKey="navigationView" />
+			<view-page name="carouselView" contentKey="carouselView" />
+			<view-page name="footerView" contentKey="footerView" />
+			<view-page name="contactFormView" contentKey="contactFormView" />
         	<view-page name="documentReadyScript" contentKey="documentReadyScript" />
-           	<view-page name="template3" />
+           	<view-page name="template4" />
         </event-handler>
         
-        <!-- executeContactAction -->
         <event-handler event="executeContactAction">
         	<notify listener="RightsListener" method="getAllowedEventsList" />
         	<event-arg name="failEvent" value="contact_form" />
@@ -990,26 +971,15 @@
         
         <event-handler event="contact_form_confirmation" access="public">
         	<notify listener="RightsListener" method="getAllowedEventsList" />
-        	<view-page name="dialogRegistration" contentKey="dialogRegistration" />
-        	<view-page name="dialogRegistrationConfirm" contentKey="dialogRegistrationConfirm" />
-        	<view-page name="dialogForgotPassword" contentKey="dialogForgotPassword" />
-        	<view-page name="dialogForgotPasswordConfirm" contentKey="dialogForgotPasswordConfirm" />
-        	<view-page name="dialogContact" contentKey="dialogContact" />
-        	<view-page name="dialogContactConfirm" contentKey="dialogContactConfirm" />
-        	<view-page name="dialogSamples" contentKey="dialogSamples" />
-        	<view-page name="dialogSamplesConfirm" contentKey="dialogSamplesConfirm" />
         	<view-page name="dialogLogin" contentKey="dialogLogin" />
-        	<notify listener="ProductCategoryPlainListener" method="findAllAsc" />
-        	<notify listener="CmsCategoryPlainListener" method="findAllAsc" />
-        	<notify listener="CmsContentListener" method="findByItemSeo" />
-        	<notify listener="ProductListener" method="findAllHomePage" />
-        	<notify listener="DeltaListener" method="findAll" />
-        	<notify listener="AlfaListener" method="findLatest" />
         	<view-page name="bestView" contentKey="bestView" />
         	<view-page name="navigationTopView" contentKey="navigationTopView" />
-        	<view-page name="contactConfirmationView" contentKey="contactConfirmationView" />
+        	<view-page name="navigationView" contentKey="navigationView" />
+			<view-page name="carouselView" contentKey="carouselView" />
+			<view-page name="footerView" contentKey="footerView" />
+			<view-page name="contactConfirmationView" contentKey="contactConfirmationView" />
         	<view-page name="documentReadyScript" contentKey="documentReadyScript" />
-           	<view-page name="template3" />
+           	<view-page name="template4" />
         </event-handler>
         <!-- CONTACT --> <!-- CONTACT --> <!-- CONTACT -->
         
@@ -1199,7 +1169,6 @@
     	<page-view name="articleView" page="/views/front/articles/articleView.php"/>
     	
     	<!-- CMS -->
-    	<page-view name="cmsCategoriesView" page="/views/front/cms/cmsCategoriesView.php"/>
     	<page-view name="cmsView" page="/views/front/cms/cmsView.php"/>
     	
     	<!--  ADDITIONAL PAGES -->

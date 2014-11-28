@@ -1,22 +1,23 @@
 <?
 require_once("model/components/session.inc.php");
+require_once("model/components/translator.inc.php");
 $objAppSession=new AppSession();
 $SN = $objAppSession->getSession('SN');
-$sLang = $objAppSession->getSession('sLang');
-require_once("model/components/translator.inc.php");
 $sLang = $objAppSession->getSession('sLang');
 $oT = new Translator('template3',$sLang);
 ?>
 
+
 <?$sendto = "musikkglede@musikkglede.no";
+	//$sendto = "tprokop@prothomsoft.com";
+	
+	$Name = $event->getArg('Name');
+	$Company = $event->getArg('Company');
+	$Email = $event->getArg('Email');
+	$PhoneNumber = $event->getArg('PhoneNumber');
+	$Message = $event->getArg('Message');
 
-$Name = $event->getArg('Name');
-$Company = $event->getArg('Company');
-$Email = $event->getArg('Email');
-$CompanyAddress = $event->getArg('CompanyAddress');
-$Content = $event->getArg('Content');
-
-$headers = "From: \"=?UTF-8?B?" . base64_encode($Name) ."?=\" <" . $Email . ">\r\n";
+	$headers = "From: \"=?UTF-8?B?" . base64_encode($Name) ."?=\" <" . $Email . ">\r\n";
 	//$headers = "From: " . $email . "\r\n";
 	$headers .="Mime-Version: 1.0\r\n";
 	$headers.="Content-Type: text/plain; charset=UTF-8";
@@ -26,11 +27,11 @@ $headers = "From: \"=?UTF-8?B?" . base64_encode($Name) ."?=\" <" . $Email . ">\r
 	//$headers .= "Reply-To:".$email."\r\n";
 	//$headers .= "X-Priority: 1\r\n";
 	//$headers .= "X-MSMail-Priority: High\r\n";
-	$tresc = "Your Name: ".$Name."\n";
-	$tresc .= "Company name: ".$Company."\n";
-	$tresc .= "Email Address: ".$Email."\n";
-	$tresc .= "Phone number: ".$CompanyAddress."\n";
-	$tresc .= "Message: ".$Content."\n";
+	$tresc = "".$oT->gL("txtYourName").": ".$Name."\n";
+	$tresc .= "".$oT->gL("txtCompanyName").": ".$Company."\n";
+	$tresc .= "".$oT->gL("txtEmail").": ".$Email."\n";
+	$tresc .= "".$oT->gL("txtPhoneNumber").": ".$PhoneNumber."\n";
+	$tresc .= "".$oT->gL("txtMessage").": ".$Message."\n";
 	
 	//konwertowanie z utf-8 na iso 8859-2
 	$temat =  "=?UTF-8?B?".base64_encode("Contact from musikkglede.no")."?=";
@@ -44,31 +45,37 @@ $headers = "From: \"=?UTF-8?B?" . base64_encode($Name) ."?=\" <" . $Email . ">\r
 	//echo $headers . "\n\n\n\n\n" . $tresc;
 ?>
 
-<div class="site-center-content cms">
-
+	<!-- Begin Main -->
+	<div role="main" class="main">
 	
-	<div class="cms subpage_head">
-		<div>
-			<h3><font color="#666"><?=$oT->gL("txtContact")?></font></h3>
+		<!-- Begin page top -->
+		<section class="page-top-md">				
+		</section>
+		<!-- End page top -->
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="blog-posts single-post">
+						<article class="post post-large blog-single-post">
+							<h3><?=$oT->gL("txtContact")?></h3>
+							<div class="post-content">
+								<p>
+								<?if($wyslane) {?>
+										<?=$oT->gL("txtMessageSend")?>
+									<?} else {?>
+										<?=$oT->gL("txtMessageNotSend")?>
+									<?}?>
+								</p>
+								<p><a class="btn btn-primary" href="<?=$SN;?>musikkglede.html"><?=$oT->gL("txtStart")?></a></p>									
+							</div>
+						</article>							
+					</div>
+				</div>
+			</div>	
 		</div>
 	</div>
-	<div class="ui-helper-clearfix spacer12"></div> <!-- end .ui-helper-clearfix spacer -->
+	<!-- End Main -->
 
-	<div class="site-center-content">
-		<p>
-			<?if($wyslane) {?>
-					<?=$oT->gL("txtMessageSend")?>
-				<?} else {?>
-					<?=$oT->gL("txtMessageNotSend")?>
-				<?}?>
-			</p>
-	</div>
-	
-	<div class="ui-helper-clearfix spacer">
-	</div> <!-- end .ui-helper-clearfix spacer -->
-	
-	<div class="ui-widget formButtons">
-		<span class="siteButton"><a href="<?=$SN;?>musikkpedagogikk.html"><?=$oT->gL("txtStart")?></a></span>
-	</div>
-</div>
-<div class="ui-helper-clearfix spacer"></div>
+
+

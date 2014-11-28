@@ -5,6 +5,14 @@ class filters_ValidateContactFormFieldsFilter extends MachII_framework_EventFilt
 	
     function filterEvent(&$event)
     {
+    	$newEventArgs = &$event->getArgs();
+    	if ($event->isArgDefined('Name') && ($event->getArg('Name') == '')) {
+        	$newEventArgs['message'] = 'txtName';
+        	$newEventArgs['missingField'] = 'Name';
+        	$this->announceEvent($event->getArg('failEvent'), $newEventArgs);
+        	return false;
+        }
+			
     	if ($event->isArgDefined('Email') && ($event->getArg('Email') == '')) {
         	$newEventArgs['message'] = 'txtEmail';
         	$newEventArgs['missingField'] = 'Email';
@@ -17,6 +25,20 @@ class filters_ValidateContactFormFieldsFilter extends MachII_framework_EventFilt
         	$this->announceEvent($event->getArg('failEvent'), $newEventArgs);
         	return false;
     	}
+		if ($event->isArgDefined('PhoneNumber') && ($event->getArg('PhoneNumber') == '')) {
+        	$newEventArgs['message'] = 'txtPhoneNumber';
+        	$newEventArgs['missingField'] = 'PhoneNumber';
+        	$this->announceEvent($event->getArg('failEvent'), $newEventArgs);
+        	return false;
+        }
+		
+		if ($event->isArgDefined('Message') && ($event->getArg('Message') == '')) {
+        	$newEventArgs['message'] = 'txtMessage';
+        	$newEventArgs['missingField'] = 'Message';
+        	$this->announceEvent($event->getArg('failEvent'), $newEventArgs);
+        	return false;
+        }
+		
     	return true;     
     }
 }

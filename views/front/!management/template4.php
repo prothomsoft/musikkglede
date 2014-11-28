@@ -98,6 +98,18 @@ $oT = new Translator('template3',$sLang);
 			<?if ($event->getArg('loginFormView') != "") {
 				echo $event->getArg('loginFormView');
 			}?>
+			
+			<?if ($event->getArg('contactFormView') != "") {
+				echo $event->getArg('contactFormView');
+			}?>
+			
+			<?if ($event->getArg('cmsView') != "") {
+				echo $event->getArg('cmsView');
+			}?>
+			
+			<?if ($event->getArg('contactConfirmationView') != "") {
+				echo $event->getArg('contactConfirmationView');
+			}?>
 		
 			<?if ($event->getArg('footerView') != "") {
 				echo $event->getArg('footerView');
@@ -106,6 +118,12 @@ $oT = new Translator('template3',$sLang);
 			<?if ($event->getArg('searchView') != "") {
 				echo $event->getArg('searchView');
 			}?>
+			
+			
+			
+			
+			
+			
 			
 			
 	

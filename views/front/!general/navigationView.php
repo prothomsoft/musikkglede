@@ -1,5 +1,6 @@
 <?
 require_once("model/components/session.inc.php");
+require_once("model/components/MenuBuilderPL.inc.php");
 $objAppSession=new AppSession();
 $SN = $objAppSession->getSession('SN');
 require_once("model/components/translator.inc.php");
@@ -80,16 +81,8 @@ $oT = new Translator('template3',$sLang);
 						</li>
 					</ul>
 					<div class="navbar-collapse collapse">
-						<ul class="nav navbar-nav pull-right">
-							<li><a href="shortcodes.html">OM OSS</a></li>
-							<li><a href="shortcodes.html">SALGS- OG LEVERINGSVILKÅR</a></li>
-							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">KONTAKT</a>
-								<ul class="dropdown-menu">
-									<li><a href="#">KONTAKTSJEMA</a></li>
-									<li><a href="#">KONTAKTINFORMASJON</a></li>
-								</ul>
-							</li>
-						</ul>
+						<?$menu = new MenuBuilderPL();
+						echo $menu->get_menu_html();?>						
 					</div><!--/.nav-collapse --> 
 				</div><!--/.container-fluid --> 
 			</nav>

@@ -82,7 +82,7 @@ class MenuBuilderPL
 		$parent_stack = array();
 		
 		// HTML wrapper for the menu (open)
-		$this->html[] = '<ul class="sf-menu">';
+		$this->html[] = '<ul class="nav navbar-nav pull-right">';
 		
 		while ( $loop && ( ( $option = each( $children[$parent] ) ) || ( $parent > $root_id ) ) )
 		{
@@ -100,12 +100,12 @@ class MenuBuilderPL
 				
 				// HTML for menu item containing childrens (open)
 				$this->html[] = sprintf(
-					'%1$s<li><a href="%2$s">%3$s</a>',
+					'%1$s<li class="dropdown"><a href="%2$s" class="dropdown-toggle" data-toggle="dropdown">%3$s</a>',
 					$tab,   // %1$s = tabulation
 					$option['value']['Url'],   // %2$s = link (URL)
 					htmlspecialchars_decode($option['value']['Name'])   // %3$s = title
 				); 
-				$this->html[] = $tab . "\t" . '<ul class="submenu">';
+				$this->html[] = $tab . "\t" . '<ul class="dropdown-menu">';
 				
 				
 				

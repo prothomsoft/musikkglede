@@ -49,6 +49,7 @@
 		<input type="text" name="Description" id="Description" value="<?echo htmlspecialchars_decode($event->getArg('Description'));?>" class="text ui-widget-content ui-corner-all <?if ($event->getArg("missingField") == "Description") echo "ui-state-error"?>" />
 	</fieldset>
 	
+	<?/*
 	<fieldset>
 		<label for="ShortDescription">YouTube Code: http://www.youtube.com/embed/KjQEAb6VT-E</label>
 		<input type="text" name="ShortDescription" id="ShortDescription" value="<?echo htmlspecialchars_decode($event->getArg('ShortDescription'));?>" class="text ui-widget-content ui-corner-all <?if ($event->getArg("missingField") == "ShortDescription") echo "ui-state-error"?>" />
@@ -158,6 +159,8 @@
 		<label for="Om18">Soundcloud embed object URL 18</label>
 		<input type="text" name="Om18" id="Om18" value="<?echo htmlspecialchars_decode($event->getArg('Om18'));?>" class="text ui-widget-content ui-corner-all <?if ($event->getArg("missingField") == "Om18") echo "ui-state-error"?>" />
 	</fieldset>
+	 */?>
+	 
 	
 </div>
 	

@@ -107,7 +107,7 @@
 .post-image .owl-carousel .owl-controls .owl-buttons .owl-prev,
 .post-image .owl-carousel .owl-controls .owl-buttons .owl-next {
   border-radius: 2px;
-  height: 30px;
+  xheight: 30px;
   line-height: 30px;
   margin: 0 2px;
   text-align: center;
