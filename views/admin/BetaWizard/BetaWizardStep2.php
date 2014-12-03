@@ -1,5 +1,5 @@
 <div class="ui-widget-header ui-corner-all center-header">
-	Article entry - Picture
+	Product category - Picture (480x300px)
 </div>
 
 <?if ($event->getArg('message') != "") {?>

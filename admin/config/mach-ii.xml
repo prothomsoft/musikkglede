@@ -512,7 +512,7 @@
             <notify listener="ProductListener" method="checkId" />
         	<filter name="validateProductStep1Filter" />
         	<filter name="validateProductStep2Filter" />
-        	<notify listener="ProductCategoryPlainListener" method="findAllAsc" />
+        	<notify listener="BetaListener" method="findAll" />
         	<view-page name="menu" contentKey="menu" />
            		<view-page name="productWizardNavigation" contentKey="productWizardNavigation" />
 	           	<view-page name="productWizardStep1" contentKey="productWizardStep1" />

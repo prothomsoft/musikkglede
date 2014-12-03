@@ -63,19 +63,12 @@ class BetaGateway {
       return $arr;
    }
    
-   public function findAll($clubId, $gamaId){
+   public function findAll(){
       
       $DB = new DB();
       $DB->connect();
       $query  = "SELECT BetaId,ClubId,GamaId,Name,SeoName,Keyword,Description,ShortDescription,LongDescription,UpdateDate,BetaOrder,Status,ImgDriveName,EventDate FROM Beta";
-      $query .= " WHERE 1 = 1";
-      if( $clubId != 0 ){
-	     	$query .= " AND ClubId = '".$clubId."'";
-	  }
-	  if( $gamaId != 0 ){
-	     	$query .= " AND GamaId = '".$gamaId."'";
-	  }
-      $query .= " ORDER BY BetaOrder DESC";
+      $query .= " ORDER BY BetaOrder ASC";	  	  
       $DB->query($query);
       $arr = "";
       if ($DB->numRows()>0)
@@ -103,7 +96,7 @@ class BetaGateway {
       return $arr;
    }
    
-   public function findAllLimited($clubId, $gamaId, $currentPage,$itemsPerPage){
+   public function findAllLimited($currentPage,$itemsPerPage){
    	  
 		if ($currentPage != '') {
 	   		$page=$currentPage;
@@ -124,13 +117,7 @@ class BetaGateway {
        	$DB->connect();	
       	$query  = "SELECT BetaId,ClubId,GamaId,Name,SeoName,Keyword,Description,ShortDescription,LongDescription,UpdateDate,BetaOrder,Status,ImgDriveName,EventDate FROM Beta ";
       	$query .= " WHERE 1 = 1";
-      	if( $clubId != 0 ){
-	     	$query .= " AND ClubId = '".$clubId."'";
-	   }
-	   if( $gamaId != 0 ){
-	     	$query .= " AND GamaId = '".$gamaId."'";
-	   }
-      	$query .= " ORDER BY BetaOrder DESC";
+      	$query .= " ORDER BY BetaOrder ASC";
       	$query .= " LIMIT ".$start.",".$limit;
       	$DB->query($query);
 	    $arr = "";

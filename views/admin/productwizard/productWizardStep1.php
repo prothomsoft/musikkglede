@@ -26,13 +26,13 @@
 		
 		<fieldset>
 			<label for="ProductCategory">Product Category:</label>
-			<?$arrProductCategoryPlain = $event->getArg('arrProductCategoryPlain');?>
-			<?if($arrProductCategoryPlain) {?>
-				<select name="ProductCategoryId" style="width:250px;">
+			<?$arrBetas = $event->getArg('arrBetas');?>
+			<?if($arrBetas) {?>
+				<select name="BetaId" style="width:250px;">
 					<option value="">--- select ---</a>
-					<?foreach($arrProductCategoryPlain as $objProductCategoryPlain) {?>
-						<?if($event->getArg("ProductCategoryId") == $objProductCategoryPlain->getProductCategoryId()) {$selected = "selected";} else {$selected = "";}?>
-						<option value="<?=$objProductCategoryPlain->getProductCategoryId();?>" <?=$selected?>><?=$objProductCategoryPlain->getProductCategoryName();?></a>
+					<?foreach($arrBetas as $objBeta) {?>
+						<?if($event->getArg("BetaId") == $objBeta->getBetaId()) {$selected = "selected";} else {$selected = "";}?>
+						<option value="<?=$objBeta->getBetaId();?>" <?=$selected?>><?=$objBeta->getName();?></a>
 					<?}?>
 				</select>
 			<?}?>

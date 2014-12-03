@@ -8,6 +8,9 @@ require_once("ProductGateway.inc.php");
 require_once("ProductDao.inc.php");
 require_once("ProductBean.inc.php");
 
+require_once("BetaDao.inc.php");
+require_once("BetaBean.inc.php");
+
 require_once("ProductCategoryDao.inc.php");
 require_once("ProductCategoryGateway.inc.php");
 
@@ -322,7 +325,7 @@ class model_ProductListener extends MachII_framework_Listener
 		$DB->connect();
 		
 		// columns in the table
-		$aColumns = array('ProductId', 'ImgDriveName' , 'Name', 'ProductCategoryLevelOneName', 'Price', 'UpdateDate', 'ProductOrder');
+		$aColumns = array('ProductId', 'ImgDriveName' , 'Name', 'BetaId', 'Price', 'UpdateDate', 'ProductOrder');
 		$sIndexColumn = "ProductId";
 		
 		// paging
@@ -345,16 +348,7 @@ class model_ProductListener extends MachII_framework_Listener
 			$sOrder = substr_replace($sOrder, "", -2);
 		}
 		
-		// filtering by category
-		$productCategorySeoName = $event->getArg("productCategorySeoName");
-		$sWhere = "";
-		
-		if ($productCategorySeoName != "\'all\'")	{
-		// before upload if ($productCategorySeoName != "\'all\'")	{
-			$sWhere = "WHERE ";
-			$sWhere .= "ProductCategoryLevelTwoSeoName IN (".stripslashes($productCategorySeoName).") ";
-			$sWhere .= " OR ProductCategoryLevelOneSeoName IN (".stripslashes($productCategorySeoName).") ";
-		}
+		$sWhere = "WHERE 1=1 ";
 		
 		// get data to display
 		$sQuery = "
@@ -392,12 +386,15 @@ class model_ProductListener extends MachII_framework_Listener
 		while ($aRow = mysql_fetch_array($rResult))	{
 			$responseJSON .= "[";
 			for ($i=0; $i<count($aColumns); $i++) {
-				
 				if ( $aColumns[$i] == "ImgDriveName" ) {
-					
 					$responseJSON .= '"<img src=\"'.$SN.'/upload/micro/'.$aRow[$aColumns[$i]].'\">",';
 				} else if ($aColumns[$i] == "Price"){
 					$responseJSON .= '"'.$aRow[ $aColumns[$i] ].' PLN",';
+				} else if ($aColumns[$i] == "BetaId"){
+					$betaId = $aRow[$aColumns[$i]];
+					$objBetaDao = new BetaDao();
+					$objBeta = $objBetaDao->read($betaId);					
+					$responseJSON .= '"'.$objBeta->getName().'",';
 				} else {
 					/* General output */
 					$responseJSON .= '"'.str_replace('"', '\"', $aRow[ $aColumns[$i] ]).'",';
@@ -436,48 +433,19 @@ class model_ProductListener extends MachII_framework_Listener
       	}
 		
 		// WIZARD STEP 1 ---------->
-		// ProductCategoryId ---------->
-		if($event->isArgDefined('ProductCategoryId') && $event->getArg('ProductCategoryId') != "") {
-			$productCategoryId = $event->getArg('ProductCategoryId');
-			$objProductBean->setProductCategoryId($productCategoryId);
-			$objProductCategoryDao = new ProductCategoryDao();
-			$objProductCategory = $objProductCategoryDao->read($productCategoryId);
-			$productCategoryFatherId = $objProductCategory->getFatherId();
-			if($productCategoryFatherId == 0) { // means that it is father category
-				$productCategoryLevelOneName = $objProductCategory->getName();
-				$objProductBean->setProductCategoryLevelOneName($productCategoryLevelOneName);
-				$objClearUrl = new ClearUrl($productCategoryLevelOneName);
-				$objProductBean->setProductCategoryLevelOneSeoName($objClearUrl->clear());
-			} else {
-				// get father categoryName
-				$objProductFatherCategory = $objProductCategoryDao->read($productCategoryFatherId);
-				$productCategoryLevelOneName = $objProductFatherCategory->getName();
-				$objProductBean->setProductCategoryLevelOneName($productCategoryLevelOneName);
-				$objClearUrl = new ClearUrl($productCategoryLevelOneName);
-				$objProductBean->setProductCategoryLevelOneSeoName($objClearUrl->clear());
-				// get child categoryName
-				$objProductCategory = $objProductCategoryDao->read($productCategoryId);
-				$productCategoryLevelTwoName = $objProductCategory->getName();
-				$objProductBean->setProductCategoryLevelTwoName($productCategoryLevelTwoName);
-				$objClearUrl = new ClearUrl($productCategoryLevelTwoName);
-				$objProductBean->setProductCategoryLevelTwoSeoName($objClearUrl->clear());
-			}
+		if($event->isArgDefined('BetaId') && $event->getArg('BetaId') != "") {
+			$BetaId = htmlspecialchars(trim($event->getArg('BetaId')), ENT_QUOTES,'UTF-8',true);
+			$objProductBean->setBetaId($BetaId);
 			$objProductDao->update($objProductBean);						
 		}
-		if($event->isArgDefined('ProductCategoryId') && $event->getArg('ProductCategoryId') == "") {
-			$productCategoryId = "";
-			$objProductBean->setProductCategoryId($productCategoryId);
-			$productCategoryLevelOneName = "";
-			$objProductBean->setProductCategoryLevelOneName($productCategoryLevelOneName);
-			$objProductBean->setProductCategoryLevelOneSeoName($productCategoryLevelOneName);
-			$productCategoryLevelTwoName = "";
-			$objProductBean->setProductCategoryLevelTwoName($productCategoryLevelTwoName);
-			$objProductBean->setProductCategoryLevelTwoSeoName($productCategoryLevelTwoName);			
+		if($event->isArgDefined('BetaId') && $event->getArg('BetaId') == "") {
+			$BetaId = "";
+			$objProductBean->setBetaId($BetaId);
 			$objProductDao->update($objProductBean);
 		}
-		if($objProductBean->getProductCategoryId() != "") {
-			$productCategoryId = $objProductBean->getProductCategoryId(); 
-			$event->setArg('ProductCategoryId', $productCategoryId);
+		if($objProductBean->getBetaId() != "") {
+			$BetaId = $objProductBean->getBetaId();
+			$event->setArg('BetaId', $BetaId);
 		}
 		
 		
@@ -501,20 +469,20 @@ class model_ProductListener extends MachII_framework_Listener
 			$event->setArg('Name', $name);
 		}
 		
-		// ExtName ---------->
-		if($event->isArgDefined('ExtName') && $event->getArg('ExtName') != "") {
-			$extName = htmlspecialchars(trim($event->getArg('ExtName')), ENT_QUOTES,'UTF-8',true);
-			$objProductBean->setExtName($extName);
+		// BetaId ---------->
+		if($event->isArgDefined('BetaId') && $event->getArg('BetaId') != "") {
+			$BetaId = htmlspecialchars(trim($event->getArg('BetaId')), ENT_QUOTES,'UTF-8',true);
+			$objProductBean->setBetaId($BetaId);
 			$objProductDao->update($objProductBean);						
 		}
-		if($event->isArgDefined('ExtName') && $event->getArg('ExtName') == "") {
-			$extName = "";
-			$objProductBean->setExtName($extName);
+		if($event->isArgDefined('BetaId') && $event->getArg('BetaId') == "") {
+			$BetaId = "";
+			$objProductBean->setBetaId($BetaId);
 			$objProductDao->update($objProductBean);
 		}
-		if($objProductBean->getExtName() != "") {
-			$extName = $objProductBean->getExtName();
-			$event->setArg('ExtName', $extName);
+		if($objProductBean->getBetaId() != "") {
+			$BetaId = $objProductBean->getBetaId();
+			$event->setArg('BetaId', $BetaId);
 		}
 		
 		// Code ---------->

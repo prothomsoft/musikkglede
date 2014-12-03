@@ -31,6 +31,8 @@
 	    <input type="hidden" name="PriceOld" id="PriceOld" value="">
 	    <input type="hidden" name="Points" id="Points" value="">
 	    <input type="hidden" name="PointsMinus" id="PointsMinus" value="">
+	    <input type="hidden" name="PointsMinus" id="PointsMinus" value="">
+	    
 	    
 	<div style="float:left; width:48%">
 	
@@ -96,20 +98,7 @@
 		<input type="hidden" name="ContactDescription" value="">		
 	<div class="ui-helper-clearfix spacer"></div>
 	
-	<fieldset >
-		<label for="IsBestProduct">Display in right column</label>
-		<select name="IsBestProduct" style="width:250px;">
-			<?if($event->getArg("IsBestProduct") == 1) {?>
-				<option value="1" selected>Yes</a>
-				<option value="0">No</a>
-			<?} else {?>
-				<option value="1">Yes</a>
-				<option value="0" selected>No</a>
-			<?}?>
-		</select>
-	</fieldset>
-	<div class="ui-helper-clearfix spacer"></div>
-	
+	<input type="hidden" name="IsBestProduct" value="1">
 	<input type="hidden" name="IsHomeProduct" value="1">
 	
 	<input type="hidden" name="IsAvailable" value="1">

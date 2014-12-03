@@ -354,7 +354,7 @@ $(document).ready(function() {
 		"aaSorting": [[ 5, "desc" ]],
 		"bProcessing": false,
 		"bLengthChange": true,
-		"iDisplayLength": 10, 
+		"iDisplayLength": 25, 
 		"sDom": '<"top"p>t<"bottom"pl<"clear">',
 		"oLanguage": {
 			"sUrl": "../lang/pl_PL.txt"

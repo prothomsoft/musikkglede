@@ -318,8 +318,7 @@ class model_BetaListener extends MachII_framework_Listener
     
 	function findAll(&$event) {
 		$objBetaGateway = new BetaGateway();
-		$categoryId = 0;
-		$arrBetas = $objBetaGateway->findAll($categoryId);
+		$arrBetas = $objBetaGateway->findAll();
 		$event->setArg("arrBetas", $arrBetas);
 	}
 	
@@ -361,7 +360,7 @@ class model_BetaListener extends MachII_framework_Listener
     	$clubId = $event->getArg('id2');
     	$gamaId = $event->getArg('id3');
     	 
-		$arrBeta = $objBetaGateway->findAll($clubId, $gamaId);
+		$arrBeta = $objBetaGateway->findAll();
 		$i=1;
 		if ($arrBeta) {
 			foreach ($arrBeta as $objBeta) {
@@ -399,7 +398,7 @@ class model_BetaListener extends MachII_framework_Listener
     	$clubId = $event->getArg('id2');
     	$gamaId = $event->getArg('id3');
     	
-    	$arrBetas = $objBetaGateway->findAllLimited($clubId, $gamaId, $arrPagination['nCurrentPage'],$arrPagination['nItemsPerPage']);	
+    	$arrBetas = $objBetaGateway->findAllLimited($arrPagination['nCurrentPage'],$arrPagination['nItemsPerPage']);	
 	 	$event->setArg('arrBetas',$arrBetas);	
 	}
 }

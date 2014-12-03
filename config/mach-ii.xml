@@ -120,8 +120,6 @@
 
     <!-- EVENTS -->
     <event-handlers>
-    
-        
         
         <!-- START --> <!-- START --> <!-- START -->
         <event-handler event="musikkglede">
@@ -131,14 +129,14 @@
         	<notify listener="SigmaListener" method="getQueue" />
         	<notify listener="SigmaListener" method="getListNavigation" />
         	<notify listener="SigmaListener" method="getList" />
-        	<notify listener="DeltaListener" method="findAll" />
+        	<notify listener="BetaListener" method="findAll" />
         	<notify listener="ProductListener" method="findAllHomePage" />
         	<notify listener="AlfaListener" method="findLatest" />
-        	<view-page name="carouselView" contentKey="carouselView" />
+        	<!-- <view-page name="navigationView" contentKey="navigationView" /> 
+        	<view-page name="carouselView" contentKey="carouselView" /> -->
         	<view-page name="productCategoriesView" contentKey="productCategoriesView" />
-        	<view-page name="searchView" contentKey="searchView" />
-        	<view-page name="navigationView" contentKey="navigationView" />
-        	<view-page name="footerView" contentKey="footerView" />
+        	<!--<view-page name="footerView" contentKey="footerView" />
+        	<view-page name="searchView" contentKey="searchView" />-->
            	<view-page name="template4" />
         </event-handler>
         <!-- START --> <!-- START --> <!-- START -->
@@ -157,10 +155,11 @@
         	<notify listener="CmsContentPictureListener" method="getByCmsContentObjAndId" />
         	<notify listener="ProductListener" method="findAllHomePage" />
         	<notify listener="DeltaListener" method="findAll" />
-        	<view-page name="carouselView" contentKey="carouselView" />
-        	<view-page name="navigationView" contentKey="navigationView" />
+        	<!--<view-page name="navigationView" contentKey="navigationView" />
+        	<view-page name="carouselView" contentKey="carouselView" />-->
         	<view-page name="cmsView" contentKey="cmsView" />
-        	<view-page name="footerView" contentKey="footerView" />
+        	<!--<view-page name="footerView" contentKey="footerView" />
+        	<view-page name="searchView" contentKey="searchView" />-->
            	<view-page name="template4" />        	
         </event-handler>
         <!-- CMS --> <!-- CMS --> <!-- CMS -->
@@ -377,11 +376,11 @@
         <!-- LOGIN/LOGOUT --> <!-- LOGIN/LOGOUT --> <!-- LOGIN/LOGOUT -->
         <event-handler event="login" access="public">
         	<notify listener="RightsListener" method="getAllowedEventsList" />
+        	<!--<view-page name="navigationView" contentKey="navigationView" />
+        	<view-page name="carouselView" contentKey="carouselView" />-->
         	<view-page name="loginFormView" contentKey="loginFormView" />
-        	<view-page name="carouselView" contentKey="carouselView" />
-        	<view-page name="navigationView" contentKey="navigationView" />
-        	<view-page name="footerView" contentKey="footerView" />
-        	<view-page name="searchView" contentKey="searchView" />
+        	<!--<view-page name="footerView" contentKey="footerView" />
+        	<view-page name="searchView" contentKey="searchView" />-->
         	<view-page name="template4" />
         </event-handler>
         

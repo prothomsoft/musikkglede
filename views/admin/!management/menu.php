@@ -72,23 +72,6 @@
 			</div>
 		</div>
 	<?}?>
-		
-	
-	<?if (in_array('showupdatecategorylist', $arrEventsAllowedForLevel)) {?>
-		<div>
-			<h3><a href="#">File Manager</a></h3>
-			<div class="accordion_content">
-				<?$arrHighligths = array(showUpdateCategoryList);
-	      		$currentEvent = $event->getArg('event');
-	      		$activeStyle = "";
-	      		if (in_array($currentEvent, $arrHighligths)) {
-		      		echo "<script>function initStartAdmin() {\$(\"#accordion\").accordion( \"option\", \"active\", 3 );}</script>";
-		      		$activeStyle = "style=\"font-weight:bold\"";
-	      		}?>
-				<p <?=$activeStyle?>><a href="index.php?event=showUpdateCategoryList">Manage Files</a></p>
-			</div>
-		</div>
-	<?}?>
 	
 	<?if (in_array('getdeltatabledata', $arrEventsAllowedForLevel)) {?>
 		<div>
@@ -98,7 +81,7 @@
 	      		$currentEvent = $event->getArg('event');
 	      		$activeStyle = "";
 	      		if (in_array($currentEvent, $arrHighligths)) {
-		      		echo "<script>function initStartAdmin() {\$(\"#accordion\").accordion( \"option\", \"active\", 4 );}</script>";
+		      		echo "<script>function initStartAdmin() {\$(\"#accordion\").accordion( \"option\", \"active\", 3 );}</script>";
 		      		$activeStyle = "style=\"font-weight:bold\"";
 	      		}?>
 				<p <?=$activeStyle?>><a href="index.php?event=showDeltasList">List of Headers</a></p>
@@ -110,7 +93,7 @@
 	      			$currentEvent = $event->getArg('event'); 
 	      			$activeStyle = "";
 	      			if (in_array($currentEvent, $arrHighligths)) {
-		      			echo "<script>function initStartAdmin() {\$(\"#accordion\").accordion( \"option\", \"active\", 4 );}</script>";
+		      			echo "<script>function initStartAdmin() {\$(\"#accordion\").accordion( \"option\", \"active\", 3 );}</script>";
 		      			$activeStyle = "style=\"font-weight:bold\"";
 	      			}?>
 	      			<p <?=$activeStyle?>><a href="index.php?event=showDeltaStep1">Add Header</a></p>
@@ -118,20 +101,18 @@
 		</div>
 	<?}?>
 	
-	
-	
-	<?/*if (in_array('getbetatabledata', $arrEventsAllowedForLevel)) {?>
+	<?if (in_array('getbetatabledata', $arrEventsAllowedForLevel)) {?>
 		<div>
-			<h3><a href="#">Articles</a></h3>
+			<h3><a href="#">Product Categories</a></h3>
 			<div class="accordion_content">
 			<?$arrHighligths = array(showBetasList, executeRemoveBetasAction, executeSaveBetasAction);
 	      		$currentEvent = $event->getArg('event');
 	      		$activeStyle = "";
 	      		if (in_array($currentEvent, $arrHighligths)) {
-		      		echo "<script>function initStartAdmin() {\$(\"#accordion\").accordion( \"option\", \"active\", 5 ); }</script>";
+		      		echo "<script>function initStartAdmin() {\$(\"#accordion\").accordion( \"option\", \"active\", 4 ); }</script>";
 		      		$activeStyle = "style=\"font-weight:bold\"";
 	      		}?>
-				<p <?=$activeStyle?>><a href="index.php?event=showBetasList">List of Articles</a></p>
+				<p <?=$activeStyle?>><a href="index.php?event=showBetasList">List of Product Categories</a></p>
 			<?$arrHighligths = array(
 	      		  showBetaStep1,
 				  showBetaStep2,
@@ -140,13 +121,13 @@
 	      			$currentEvent = $event->getArg('event'); 
 	      			$activeStyle = "";
 	      			if (in_array($currentEvent, $arrHighligths)) {
-		      			echo "<script>function initStartAdmin() {\$(\"#accordion\").accordion( \"option\", \"active\", 5 );}</script>";
+		      			echo "<script>function initStartAdmin() {\$(\"#accordion\").accordion( \"option\", \"active\", 4 );}</script>";
 		      			$activeStyle = "style=\"font-weight:bold\"";
 	      			}?>
-	      			<p <?=$activeStyle?>><a href="index.php?event=showBetaStep1">Add/Edit Article</a></p>
+	      			<p <?=$activeStyle?>><a href="index.php?event=showBetaStep1">Add/Edit Category</a></p>
 			</div>
 		</div>
-	<?}*/?>
+	<?}?>
 	
 	
 	
@@ -180,49 +161,16 @@
 	
 	
 	
-	<?if (in_array('showusersapprovedlist', $arrEventsAllowedForLevel)) {?>
-		<div>
-			<h3><a href="#">Users</a></h3>
-			<div class="accordion_content">
-				<?$arrHighligths = array(showUsersApprovedList, showUserApprovedView, showEditUserApprovedForm,
-	      								 executeRemoveUsersApprovedAction, executeEditUserApprovedAction);
-	      		$currentEvent = $event->getArg('event');
-	      		$activeStyle = "";
-	      		if (in_array($currentEvent, $arrHighligths)) {
-		      		echo "<script>function initStartAdmin() {\$(\"#accordion\").accordion( \"option\", \"active\", 5 );}</script>";
-		      		$activeStyle = "style=\"font-weight:bold\"";
-	      		}?>
-				<p <?=$activeStyle?>><a href="index.php?event=showUsersApprovedList">List of Users</a></p>
-				<?$arrHighligths = array(showCreateUserApprovedForm,
-								   executeCreateUserApprovedAction );
-	      		$currentEvent = $event->getArg('event');
-	      		$activeStyle = "";
-	      		if (in_array($currentEvent, $arrHighligths)) {
-	      		 	echo "<script>function initStartAdmin() {\$(\"#accordion\").accordion( \"option\", \"active\", 5 );}</script>";
-	      		 	$activeStyle = "style=\"font-weight:bold\"";
-	      		}?>
-				<p <?=$activeStyle?>><a href="index.php?event=showCreateUserApprovedForm">Add User</a></p>
-			</div>
-		</div>
-	<?}?>
 	
 	<?if (in_array('showproductcategorieslist', $arrEventsAllowedForLevel)) {?>
 		<div>
 			<h3><a href="#">Products</a></h3>
 			<div class="accordion_content">
-			<?$arrHighligths = array(showProductCategoriesList);
+			<?$arrHighligths = array(showProductsList, executeRemoveProductsAction, executeSaveProductsAction);
 	      		$currentEvent = $event->getArg('event');
 	      		$activeStyle = "";
 	      		if (in_array($currentEvent, $arrHighligths)) {
-		      		echo "<script>function initStartAdmin() {\$(\"#accordion\").accordion( \"option\", \"active\", 6 );}</script>";
-		      		$activeStyle = "style=\"font-weight:bold\"";
-	      		}?>
-				<p <?=$activeStyle?>><a href="index.php?event=showProductCategoriesList">Product Categories</a></p>
-		   	<?$arrHighligths = array(showProductsList, executeRemoveProductsAction, executeSaveProductsAction);
-	      		$currentEvent = $event->getArg('event');
-	      		$activeStyle = "";
-	      		if (in_array($currentEvent, $arrHighligths)) {
-		      		echo "<script>function initStartAdmin() {\$(\"#accordion\").accordion( \"option\", \"active\", 6 );}</script>";
+		      		echo "<script>function initStartAdmin() {\$(\"#accordion\").accordion( \"option\", \"active\", 5 );}</script>";
 		      		$activeStyle = "style=\"font-weight:bold\"";
 	      		}?>
 				<p <?=$activeStyle?>><a href="index.php?event=showProductsList">List of Products</a></p>
@@ -236,7 +184,7 @@
 	      			$currentEvent = $event->getArg('event'); 
 	      			$activeStyle = "";
 	      			if (in_array($currentEvent, $arrHighligths)) {
-		      			echo "<script>function initStartAdmin() {\$(\"#accordion\").accordion( \"option\", \"active\", 6 );}</script>";
+		      			echo "<script>function initStartAdmin() {\$(\"#accordion\").accordion( \"option\", \"active\", 5 );}</script>";
 		      			$activeStyle = "style=\"font-weight:bold\"";
 	      			}?>
 	      			<p <?=$activeStyle?>><a href="index.php?event=showProductStep1">Add Product</a></p>
@@ -257,12 +205,55 @@
 	      		$currentEvent = $event->getArg('event');
 	      		$activeStyle = "";
 	      		if (in_array($currentEvent, $arrHighligths)) {
-	          		echo "<script>function initStartAdmin() {\$(\"#accordion\").accordion( \"option\", \"active\", 7 );}</script>";
+	          		echo "<script>function initStartAdmin() {\$(\"#accordion\").accordion( \"option\", \"active\", 6 );}</script>";
 		      		$activeStyle = "style=\"font-weight:bold\"";
 	      		}?>
 				<p <?=$activeStyle?>><a href="index.php?event=showOrdersList">List of Orders</a></p>
 			</div>
 		</div>
 	<?}?>
+	
+	<?if (in_array('showusersapprovedlist', $arrEventsAllowedForLevel)) {?>
+		<div>
+			<h3><a href="#">Users</a></h3>
+			<div class="accordion_content">
+				<?$arrHighligths = array(showUsersApprovedList, showUserApprovedView, showEditUserApprovedForm,
+	      								 executeRemoveUsersApprovedAction, executeEditUserApprovedAction);
+	      		$currentEvent = $event->getArg('event');
+	      		$activeStyle = "";
+	      		if (in_array($currentEvent, $arrHighligths)) {
+		      		echo "<script>function initStartAdmin() {\$(\"#accordion\").accordion( \"option\", \"active\", 7 );}</script>";
+		      		$activeStyle = "style=\"font-weight:bold\"";
+	      		}?>
+				<p <?=$activeStyle?>><a href="index.php?event=showUsersApprovedList">List of Users</a></p>
+				<?$arrHighligths = array(showCreateUserApprovedForm,
+								   executeCreateUserApprovedAction );
+	      		$currentEvent = $event->getArg('event');
+	      		$activeStyle = "";
+	      		if (in_array($currentEvent, $arrHighligths)) {
+	      		 	echo "<script>function initStartAdmin() {\$(\"#accordion\").accordion( \"option\", \"active\", 7 );}</script>";
+	      		 	$activeStyle = "style=\"font-weight:bold\"";
+	      		}?>
+				<p <?=$activeStyle?>><a href="index.php?event=showCreateUserApprovedForm">Add User</a></p>
+			</div>
+		</div>
+	<?}?>
+	
+	<?if (in_array('showupdatecategorylist', $arrEventsAllowedForLevel)) {?>
+		<div>
+			<h3><a href="#">File Manager</a></h3>
+			<div class="accordion_content">
+				<?$arrHighligths = array(showUpdateCategoryList);
+	      		$currentEvent = $event->getArg('event');
+	      		$activeStyle = "";
+	      		if (in_array($currentEvent, $arrHighligths)) {
+		      		echo "<script>function initStartAdmin() {\$(\"#accordion\").accordion( \"option\", \"active\", 8 );}</script>";
+		      		$activeStyle = "style=\"font-weight:bold\"";
+	      		}?>
+				<p <?=$activeStyle?>><a href="index.php?event=showUpdateCategoryList">Manage Files</a></p>
+			</div>
+		</div>
+	<?}?>
+		
 
 </div>

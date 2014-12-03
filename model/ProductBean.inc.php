@@ -4,6 +4,7 @@ require_once(dirname(__FILE__)."/ProductCategoryDao.inc.php");
 
 class ProductBean{
    private $ProductId;
+   private $BetaId;
    private $ProductCategoryId;
    private $ProductCategory;   // additional property for foreign key object
    private $ProductCategoryLevelOneName;
@@ -54,6 +55,14 @@ class ProductBean{
 
    public function getProductId(){
       return $this->ProductId;
+   }
+   
+   public function setBetaId($val){
+      $this->BetaId=$val;
+   }
+
+   public function getBetaId(){
+      return $this->BetaId;
    }
    
    public function setProductCategoryId($val){

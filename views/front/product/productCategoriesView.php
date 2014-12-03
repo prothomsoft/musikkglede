@@ -7,53 +7,16 @@ $SN = $objAppSession->getSession('SN');
 		<section class="product_categories">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-6 col-sm-6 col-lg-3 col-md-3 animation">
-					    <a class="collect-item-thumb" href="<?=$SN?>products.html"><img class="img-responsive" alt="Ad" src="images/collect-1.jpg"></a>
-					</div>
-					<div class="col-xs-6 col-sm-6 col-lg-3 col-md-3 animation">
-						<a class="collect-item-thumb" href="<?=$SN?>products.html"><img class="img-responsive" alt="Ad" src="images/collect-2.jpg"></a>
-					</div>
-					<div class="col-xs-6 col-sm-6 col-lg-3 col-md-3 animation">
-						<a class="collect-item-thumb" href="<?=$SN?>products.html"><img class="img-responsive" alt="Ad" src="images/collect-3.jpg"></a>
-					</div>
-					<div class="col-xs-6 col-sm-6 col-lg-3 col-md-3 animation">
-						<a class="collect-item-thumb" href="<?=$SN?>products.html"><img class="img-responsive" alt="Ad" src="images/collect-4.jpg"></a>
-					</div>
-					<div class="col-xs-6 col-sm-6 col-lg-3 col-md-3 animation">
-						<a class="collect-item-thumb" href="<?=$SN?>products.html"><img class="img-responsive" alt="Ad" src="images/collect-4.jpg"></a>
-					</div>
-					<div class="col-xs-6 col-sm-6 col-lg-3 col-md-3 animation">
-						<a class="collect-item-thumb" href="<?=$SN?>products.html"><img class="img-responsive" alt="Ad" src="images/collect-3.jpg"></a>
-					</div>
-					<div class="col-xs-6 col-sm-6 col-lg-3 col-md-3 animation">
-						<a class="collect-item-thumb" href="<?=$SN?>products.html"><img class="img-responsive" alt="Ad" src="images/collect-2.jpg"></a>
-					</div>
-					<div class="col-xs-6 col-sm-6 col-lg-3 col-md-3 animation">
-						<a class="collect-item-thumb" href="<?=$SN?>products.html"><img class="img-responsive" alt="Ad" src="images/collect-1.jpg"></a>
-					</div>
-					<div class="col-xs-6 col-sm-6 col-lg-3 col-md-3 animation">
-					    <a class="collect-item-thumb" href="<?=$SN?>products.html"><img class="img-responsive" alt="Ad" src="images/collect-1.jpg"></a>
-					</div>
-					<div class="col-xs-6 col-sm-6 col-lg-3 col-md-3 animation">
-						<a class="collect-item-thumb" href="<?=$SN?>products.html"><img class="img-responsive" alt="Ad" src="images/collect-2.jpg"></a>
-					</div>
-					<div class="col-xs-6 col-sm-6 col-lg-3 col-md-3 animation">
-						<a class="collect-item-thumb" href="<?=$SN?>products.html"><img class="img-responsive" alt="Ad" src="images/collect-3.jpg"></a>
-					</div>
-					<div class="col-xs-6 col-sm-6 col-lg-3 col-md-3 animation">
-						<a class="collect-item-thumb" href="<?=$SN?>products.html"><img class="img-responsive" alt="Ad" src="images/collect-4.jpg"></a>
-					</div>
-					<div class="col-xs-6 col-sm-6 col-lg-3 col-md-3 animation">
-						<a class="collect-item-thumb" href="<?=$SN?>products.html"><img class="img-responsive" alt="Ad" src="images/collect-4.jpg"></a>
-					</div>
-					<div class="col-xs-6 col-sm-6 col-lg-3 col-md-3 animation">
-						<a class="collect-item-thumb" href="<?=$SN?>products.html"><img class="img-responsive" alt="Ad" src="images/collect-3.jpg"></a>
-					</div>
-					<div class="col-xs-6 col-sm-6 col-lg-3 col-md-3 animation">
-						<a class="collect-item-thumb" href="<?=$SN?>products.html"><img class="img-responsive" alt="Ad" src="images/collect-2.jpg"></a>
-					</div>
-					<div class="col-xs-6 col-sm-6 col-lg-3 col-md-3 animation">
-						<a class="collect-item-thumb" href="<?=$SN?>products.html"><img class="img-responsive" alt="Ad" src="images/collect-1.jpg"></a>
+					<?$arrBetas = $event->getArg("arrBetas");?>
+					<?if($arrBetas) {?>
+						<?foreach($arrBetas as $objBeta) {?>
+							<div class="col-xs-6 col-sm-6 col-lg-3 col-md-3">
+				    			<a class="collect-item-thumb" href="<?=$SN?>products/<?=$objBeta->getBetaId();?>/<?=$objBeta->getSeoName();?>.html"><img class="img-responsive" alt="<?=htmlspecialchars_decode($objBeta->getName());?>" src="<?=$SN;?>upload/proper/<?=$objBeta->getImgDriveName();?>"></a>
+							</div>
+						<?}?>						
+					<?}?>
+					<div class="col-xs-6 col-sm-6 col-lg-3 col-md-3">
+		    			<a class="collect-item-thumb" href="http://musikkglede.no" target="_blank"><img class="img-responsive" alt="musikkglede" src="<?=$SN;?>images/collect-1.jpg"></a>
 					</div>
 				</div>
 			</div>
