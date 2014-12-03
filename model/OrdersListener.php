@@ -444,7 +444,7 @@ class model_OrdersListener extends MachII_framework_Listener
 				$messageContentTable .= "<tr>";
 				
 				$messageContentTable .= "<td width=\"100\" align=\"center\">";
-				$messageContentTable .= "<img src=\"http://www.musikkglede.no/upload/micro/".$objProduct->getImgDriveName()."\">";
+				$messageContentTable .= "<img src=\"http://mg.prothomsoft.com/upload/micro/".$objProduct->getImgDriveName()."\">";
 				$messageContentTable .= "</td>";
 				
 	      		$messageContentTable .= "<td>";
@@ -554,9 +554,9 @@ class model_OrdersListener extends MachII_framework_Listener
 			$messageContentTable .= $oT->gL("txtPhoneNumber").":".$phone1."<br/><br/>";
 			
 			// send email to customer
-	  		$fromEmail = "musikkglede@musikkglede.no";
+	  		$fromEmail = "musikkgaver@mg.prothomsoft.com";
 			$toEmail = $email;
-			$subject = "Musikkglede - ".$oT->gL("txtOrderConfirmation").": ".$orderId."";
+			$subject = "Musikkgaver- ".$oT->gL("txtOrderConfirmation").": ".$orderId."";
 			$messageContent .= "<body style=\"font-family:Arial, Helvetica, sans-serif;"; 
 			$messageContent .= "color:#5d5d5d;"; 
 			$messageContent .= "font-size:14px\">";	  
@@ -578,15 +578,15 @@ class model_OrdersListener extends MachII_framework_Listener
 			$messageContent .= "<br /><p style=\"font-size:12px\">";		
 			$messageContent .= "<hr style=\"border: 1px solid rgb(115, 186, 20);\">";
 			$messageContent .= "<strong>Beste hilsener fra,</strong><br />";	
-			$messageContent .= "András Hidas, <a href=\"http://www.musikkglede.no\" style=\"color:#C43471\">www.musikkglede.no</a><br /></p>";
+			$messageContent .= "András Hidas, <a href=\"http://mg.musikkgaver.com\" style=\"color:#C43471\">www.mg.prothomsoft.com</a><br /></p>";
 			
 			// send email to administrator
-	  		$fromEmail2 = "musikkglede@musikkglede.no";
+	  		$fromEmail2 = "musikkgaver@mg.prothomsoft.com";
 	  		
 	  		if($customerType == "Private") {
-	  			$subject2  = "Salg via musikkglede.no - betaling via PayPal. Order no.: ".$orderId." from: ".$firstName." ".$lastName." ";
+	  			$subject2  = "Salg via mg.prothomsoft.com - betaling via PayPal. Order no.: ".$orderId." from: ".$firstName." ".$lastName." ";
 	  		} else {
-	  			$subject2  = "Salg via musikkglede.no - ønsker faktura. Order no.: ".$orderId." from: ".$firstName." ".$lastName." ";
+	  			$subject2  = "Salg via mg.prothomsoft.com - ønsker faktura. Order no.: ".$orderId." from: ".$firstName." ".$lastName." ";
 	  		}
 	  		
 			$messageContent2 = "<body style=\"font-family:Arial, Helvetica, sans-serif;"; 
@@ -594,9 +594,9 @@ class model_OrdersListener extends MachII_framework_Listener
 			$messageContent2 .= "font-size:14px\">";
 			
 			if($customerType == "Private") {
-				$messageContent2 .= "<p style=\"font-size:18px\">Salg via musikkglede.no - betaling via PayPal. Order: ".$orderId." from: ".$firstName." ".$lastName."<br/></p>";
+				$messageContent2 .= "<p style=\"font-size:18px\">Salg via mg.prothomsoft.com - betaling via PayPal. Order: ".$orderId." from: ".$firstName." ".$lastName."<br/></p>";
 			} else {
-				$messageContent2 .= "<p style=\"font-size:18px\">Salg via musikkglede.no - ønsker faktura. Order: ".$orderId." from: ".$firstName." ".$lastName."<br/></p>";
+				$messageContent2 .= "<p style=\"font-size:18px\">Salg via mg.prothomsoft.com - ønsker faktura. Order: ".$orderId." from: ".$firstName." ".$lastName."<br/></p>";
 			}
 		
 			$messageContent2 .= "<strong>Create date:</strong> ".substr(($createDateTime),0,10)."<br/>";		

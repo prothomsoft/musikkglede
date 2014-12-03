@@ -3,7 +3,7 @@
     <!-- PROPERTIES -->
     <properties>
         <!-- MACH-II REQUIRED -->
-        <property name="defaultEvent" value="musikkglede"/>
+        <property name="defaultEvent" value="musikkgaver"/>
         <property name="exceptionEvent" value=""/>
         <property name="applicationRoot" value="."/>
         <property name="eventParameter" value="event"/>
@@ -122,7 +122,7 @@
     <event-handlers>
         
         <!-- START --> <!-- START --> <!-- START -->
-        <event-handler event="musikkglede">
+        <event-handler event="musikkgaver">
         	<notify listener="RightsListener" method="getAllowedEventsList" />        	
         	<view-page name="dialogLogin" contentKey="dialogLogin" />
         	<notify listener="SigmaListener" method="findLatest" />
@@ -147,7 +147,7 @@
         </event-handler>
         
         <!-- CMS --> <!-- CMS --> <!-- CMS -->
-        <event-handler event="musikkglede_page" access="public">
+        <event-handler event="musikkgaver_page" access="public">
         	<notify listener="RightsListener" method="getAllowedEventsList" />
         	<view-page name="dialogLogin" contentKey="dialogLogin" />
         	<notify listener="AlfaListener" method="findLatest" />
@@ -396,7 +396,7 @@
         <event-handler event="executeLogout" access="public">
         	<notify listener="RightsListener" method="getAllowedEventsList" />
 			<notify listener="UserListener" method="logOut" />
-        	<announce event="musikkglede" />
+        	<announce event="musikkgaver" />
         </event-handler>
         <!-- LOGIN/LOGOUT --> <!-- LOGIN/LOGOUT --> <!-- LOGIN/LOGOUT -->
         

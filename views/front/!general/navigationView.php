@@ -19,7 +19,7 @@ $oT = new Translator('template3',$sLang);
 							<span class="icon-bar"></span> 
 							<span class="icon-bar"></span> 
 						</button>
-						<a href="<?=$SN?>musikkglede.html"><img src="<?=$SN?>images/musikkglede_logo.jpg" alt="Musikkglede"></a>
+						<a href="<?=$SN?>musikkgaver.html"><img src="<?=$SN?>images/musikkgaver_logo.jpg" alt="Musikkgaver"></a>
 					</div>
 					<ul class="nav navbar-nav navbar-nav navbar-right hidden-xs hidden-sm">
 						<li class="search">

@@ -6,7 +6,7 @@
 		
 						
 		<div class="ui-widget-content ui-corner-all center-header">
-			<p>Welcome in Musikkglede administration panel.</p>
+			<p>Welcome in Musikkgaver administration panel.</p>
 		</div>
 		
 		<div class="ui-helper-clearfix spacer">

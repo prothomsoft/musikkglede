@@ -6,7 +6,7 @@ $SN = $objAppSession->getSession('SN');
 
 <div class="cms subpage_head">
 	<div>
-		<h3 class="cms">Søk på musikkglede.no: <strong><?=$event->getArg("searchKey")?></strong></h3>
+		<h3 class="cms">Søk på musikkgaver.no: <strong><?=$event->getArg("searchKey")?></strong></h3>
 	</div>
 </div>
 <div class="ui-helper-clearfix spacer6"></div> <!-- end .ui-helper-clearfix spacer -->
@@ -35,7 +35,7 @@ $SN = $objAppSession->getSession('SN');
 					<h3><a class="anchor_link_1" href="<?=$SN?>article/<?=$objSigma->getSigmaId();?>.html"><?=htmlspecialchars_decode($objSigma->getName())?></a></h3>	
 				<?}?>
 				<?if($objSigma->getEventDate() == "cms") {?>
-					<h3><a class="anchor_link_1" href="<?=$SN?>musikkglede_page/<?=$objSigma->getSeoName();?>.html"><?=htmlspecialchars_decode($objSigma->getName())?></a></h3>	
+					<h3><a class="anchor_link_1" href="<?=$SN?>musikkgaver_page/<?=$objSigma->getSeoName();?>.html"><?=htmlspecialchars_decode($objSigma->getName())?></a></h3>	
 				<?}?>
 				
 				
@@ -46,7 +46,7 @@ $SN = $objAppSession->getSession('SN');
 					<p><a class="anchor_link_2" href="<?=$SN?>article/<?=$objSigma->getSigmaId();?>.html"><u>les mer...</u></a></p>
 				<?}?>
 				<?if($objSigma->getEventDate() == "cms") {?>
-					<p><a class="anchor_link_2" href="<?=$SN?>musikkglede_page/<?=$objSigma->getSeoName();?>.html"><u>les mer...</u></a></p>
+					<p><a class="anchor_link_2" href="<?=$SN?>musikkgaver_page/<?=$objSigma->getSeoName();?>.html"><u>les mer...</u></a></p>
 				<?}?>
 			</div>
 		</div>

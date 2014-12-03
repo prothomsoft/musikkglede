@@ -231,7 +231,7 @@
 		
 		<div class="ui-helper-clearfix footer">
 			<div class="ui-widget-content ui-corner-all footer-content">
-				<p style="text-align:center">&copy; 2014 Musikkglede</a>
+				<p style="text-align:center">&copy; 2014 Musikkgaver</a>
 			</div>
 		</div> <!-- .ui-helper-clearfix footer -->
 		

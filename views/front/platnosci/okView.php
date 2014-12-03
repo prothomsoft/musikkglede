@@ -7,7 +7,7 @@
 			</div>
 		</div>
 		<div class="ui-helper-clearfix spacer6"></div> <!-- end .ui-helper-clearfix spacer -->
-		<div class="list-box cms" style="padding-left:15px;">Takk for innbetalingen!<br/><br/><a href="<?=$SN?>musikkglede.html">Klikk her</a> for å gå tilbake til startsiden.</div>
+		<div class="list-box cms" style="padding-left:15px;">Takk for innbetalingen!<br/><br/><a href="<?=$SN?>musikkgaver.html">Klikk her</a> for å gå tilbake til startsiden.</div>
 
 <div class="ui-helper-clearfix spacer">
 </div> <!-- end .ui-helper-clearfix spacer -->

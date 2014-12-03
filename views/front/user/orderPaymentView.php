@@ -257,7 +257,7 @@
 	<input type="hidden" name="no_note" value="1" />
 	<input type="hidden" name="no_shipping" value="1" />
 	<input type="hidden" name="charset" value="utf-8">
-	<input type="hidden" name="business" value="musikkglede@hotmail.com" />
+	<input type="hidden" name="business" value="musikkgaver@hotmail.com" />
 	<input type="hidden" name="invoice" value="<?=$OrderId?>">
 	<input type="hidden" name="notify_url" value="<?=$SN?>payment_online_store.html" />
 	<input type="hidden" name="return" value="<?=$SN?>payment_ok.html" />

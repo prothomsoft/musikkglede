@@ -59,7 +59,7 @@ $oT = new Translator('template3',$sLang);
 					<div class="below-foot">
 						<div class="row">
 							<div class="col-xs-6 copyrights">
-								<p>Copyright &copy; 2014 Musikkglede. All rights reserved. <a href="<?=$SN?>login.html">Login</a></p>
+								<p>Copyright &copy; 2014 Musikkgaver. All rights reserved. <a href="<?=$SN?>login.html">Login</a></p>
 							</div>
 							<?/*?>
 							<div class="col-xs-6 text-right">

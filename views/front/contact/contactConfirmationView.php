@@ -34,7 +34,7 @@ $oT = new Translator('template3',$sLang);
 	$tresc .= "".$oT->gL("txtMessage").": ".$Message."\n";
 	
 	//konwertowanie z utf-8 na iso 8859-2
-	$temat =  "=?UTF-8?B?".base64_encode("Contact from musikkglede.no")."?=";
+	$temat =  "=?UTF-8?B?".base64_encode("Contact from musikkgaver.no")."?=";
 	//$tresc = stripslashes($tresc);
 	//$tresc = strtr($tresc, "\xA5\x8C\x8F\xB9\x9C\x9F", "\xA1\xA6\xAC\xB1\xB6\xBC");
 	//$temat = stripslashes($temat);
@@ -67,7 +67,7 @@ $oT = new Translator('template3',$sLang);
 										<?=$oT->gL("txtMessageNotSend")?>
 									<?}?>
 								</p>
-								<p><a class="btn btn-primary" href="<?=$SN;?>musikkglede.html"><?=$oT->gL("txtStart")?></a></p>									
+								<p><a class="btn btn-primary" href="<?=$SN;?>musikkgaver.html"><?=$oT->gL("txtStart")?></a></p>									
 							</div>
 						</article>							
 					</div>

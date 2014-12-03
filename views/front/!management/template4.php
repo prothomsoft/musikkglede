@@ -8,9 +8,9 @@ $SN = $objAppSession->getSession('SN');
 $sLang = $objAppSession->getSession('sLang');
 $oT = new Translator('template3',$sLang);
 
-	$title = "Musikkglede";
-	$keywords = "Musikkglede";
-	$description = "Musikkglede";
+	$title = "Musikkgaver";
+	$keywords = "Musikkgaver";
+	$description = "Musikkgaver";
 	$url = "";
 	$image = "";
 	
@@ -27,7 +27,7 @@ $oT = new Translator('template3',$sLang);
 	    <meta property="og:type" content="article"/>
 	    <meta property="og:url" content="<?=$url?>"/>
 	    <meta property="og:image" content="<?=$image?>"/>
-	    <meta property="og:site_name" content="Musikkglede"/>
+	    <meta property="og:site_name" content="Musikkgaver"/>
 	    <meta property="fb:admins" content="543999369"/>
 	    <meta property="og:description" content="<?=$description?>"/>
 	    

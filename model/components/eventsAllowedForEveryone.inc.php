@@ -46,8 +46,8 @@ class EventsAllowedForEveryone {
       executecreateorder,
       executecreateorderandpayment,
 	  
-	  musikkglede_page,
-	  musikkglede,
+	  musikkgaver_page,
+	  musikkgaver,
 	  collections,
 	  pomoc,
 	  wyniki_wyszukiwania,

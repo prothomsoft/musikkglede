@@ -503,7 +503,7 @@ class model_OrdersListener extends MachII_framework_Listener
 	  		$fromEmail = "mariussj@s1120197-253.crystone.net";
 			//$toEmail = $email;
 			$toEmail = "tprokop@prothomsoft.com";
-			$subject = "Musikkglede - ".$oT->gL("txtOrderConfirmation").": ".$orderId."";
+			$subject = "Musikkgaver - ".$oT->gL("txtOrderConfirmation").": ".$orderId."";
 			$messageContent .= "<body style=\"font-family:Arial, Helvetica, sans-serif;"; 
 			$messageContent .= "color:#5d5d5d;"; 
 			$messageContent .= "font-size:14px\">";	  
@@ -517,8 +517,8 @@ class model_OrdersListener extends MachII_framework_Listener
 			$messageContent .= "<br /><p style=\"font-size:12px\">";		
 			$messageContent .= "<hr style=\"border: 1px solid rgb(115, 186, 20);\">";
 			$messageContent .= "<strong>".$oT->gL("txtKindRegards").",</strong><br />";	
-			$messageContent .= "Musikkglede<br />";
-			$messageContent .= "<a href=\"http://www.musikkglede.no\" style=\"color:#C43471\">www.musikkglede.no</a><br /></p>";
+			$messageContent .= "Musikkgaver<br />";
+			$messageContent .= "<a href=\"http://www.musikkgaver.no\" style=\"color:#C43471\">www.musikkgaver.no</a><br /></p>";
 			
 			$emails = new Emails("1", $fromEmail, $toEmail, $subject, $messageContent);
 			$emails->sendEmail();

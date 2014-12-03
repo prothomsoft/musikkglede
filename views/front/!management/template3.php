@@ -8,9 +8,9 @@ $SN = $objAppSession->getSession('SN');
 $sLang = $objAppSession->getSession('sLang');
 $oT = new Translator('template3',$sLang);
 
-	$title = "Musikkglede";
-	$keywords = "Musikkglede";
-	$description = "Musikkglede";
+	$title = "Musikkgaver";
+	$keywords = "Musikkgaver";
+	$description = "Musikkgaver";
 	$url = "";
 	$image = "";
 	
@@ -27,7 +27,7 @@ $oT = new Translator('template3',$sLang);
 	    <meta property="og:type" content="article"/>
 	    <meta property="og:url" content="<?=$url?>"/>
 	    <meta property="og:image" content="<?=$image?>"/>
-	    <meta property="og:site_name" content="Musikkglede"/>
+	    <meta property="og:site_name" content="Musikkgaver"/>
 	    <meta property="fb:admins" content="543999369"/>
 	    <meta property="og:description" content="<?=$description?>"/>
 		<link type="text/css" href="<?=$SN;?>styles/custom-theme/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
@@ -38,7 +38,7 @@ $oT = new Translator('template3',$sLang);
 		<script type="text/javascript" src="<?=$SN;?>js/hoverIntent.js"></script>
 		<script type="text/javascript" src="<?=$SN;?>js/superfish.js"></script>
 		<script type="text/javascript" src="<?=$SN;?>js/plugins.js"></script>
-		<script type="text/javascript" src="<?=$SN;?>js/jquery.musikkglede.js"></script>
+		<script type="text/javascript" src="<?=$SN;?>js/jquery.musikkgaver.js"></script>
 		<script type="text/javascript" src="<?=$SN;?>js/jquery.prettyPhoto.js"></script>
 		<script type="text/javascript" src="<?=$SN;?>js/jquery.sparkle.min.js"></script>
 		<script type="text/javascript" src="<?=$SN;?>js/slides.min.jquery.js"></script>
@@ -62,13 +62,13 @@ $oT = new Translator('template3',$sLang);
 					<li><a href="<?=$SN?>contact_form.html">Kontakt</a>
 						<ul class="submenu">
 							<li><a href="<?=$SN?>contact_form.html">Kontaktskjema</a></li>
-							<li><a href="<?=$SN?>musikkglede_page/kontaktinformasjon.html">Kontaktinformasjon</a></li>
+							<li><a href="<?=$SN?>musikkgaver_page/kontaktinformasjon.html">Kontaktinformasjon</a></li>
 						</ul>
 					</li>
 				</ul>
 			</div>
 			<div class="ui-helper-clearfix" style="float:left;">
-				<a href="<?=$SN?>musikkglede.html"><img src="<?=$SN?>images/headers/logo.jpg"></a>
+				<a href="<?=$SN?>musikkgaver.html"><img src="<?=$SN?>images/headers/logo.jpg"></a>
 			</div>
 		</div>		
 	</div>
@@ -137,19 +137,19 @@ $oT = new Translator('template3',$sLang);
 					<div>
 					
 						<div>
-							<a href="<?=$SN?>musikkglede_page/strykeinstrumenter.html"><img src="<?=$SN?>images/strykeinstrumentbanner.jpg"></a>
+							<a href="<?=$SN?>musikkgaver_page/strykeinstrumenter.html"><img src="<?=$SN?>images/strykeinstrumentbanner.jpg"></a>
 						</div>					
 					
 						<div class="ui-helper-clearfix spacer"></div> <!-- end .ui-helper-clearfix spacer -->
 
 						<div>
-							<a href="<?=$SN?>musikkglede_page/musikkgaver.html"><img src="<?=$SN?>images/musikkgaverlinkbanner.jpg"></a>
+							<a href="<?=$SN?>musikkgaver_page/musikkgaver.html"><img src="<?=$SN?>images/musikkgaverlinkbanner.jpg"></a>
 						</div>					
 					
 						<div class="ui-helper-clearfix spacer"></div> <!-- end .ui-helper-clearfix spacer -->
 					
 						<div class="center-header">
-							<img src="<?=$SN;?>images/left_bar/musikkglede_sok.jpg">
+							<img src="<?=$SN;?>images/left_bar/musikkgaver_sok.jpg">
 						</div>
 							
 						<div style="padding: 20px 7px 20px 7px; border-left: 1px solid #DEDEDE; border-right: 1px solid #DEDEDE; border-bottom: 1px solid #DEDEDE;">
@@ -167,7 +167,7 @@ $oT = new Translator('template3',$sLang);
 						<div class="ui-helper-clearfix spacer"></div> <!-- end .ui-helper-clearfix spacer -->
 					
 						<div class="center-header">
-							<img src="<?=$SN;?>images/left_bar/musikkglede_nyhetsbrev.jpg">
+							<img src="<?=$SN;?>images/left_bar/musikkgaver_nyhetsbrev.jpg">
 						</div>		
 							
 						<div style="padding: 20px 7px 20px 7px; border-left: 1px solid #DEDEDE; border-right: 1px solid #DEDEDE; border-bottom: 1px solid #DEDEDE;">
@@ -404,7 +404,7 @@ $oT = new Translator('template3',$sLang);
 	<div class="bottom_footer">
 		<div id="wrapper">
 			<div id="footer" class="clearfix">
-		    		<p>&copy; 2013 <a class="anchor_footer" href="http://musikkglede.no/" title="">Musikkglede</a>  | <a href="#" class="contact anchor_footer">Kontakt</a>  | <span class="login"><a class="anchor_footer" href="#">Login</a></span></p>
+		    		<p>&copy; 2013 <a class="anchor_footer" href="http://musikkgaver.no/" title="">Musikkgaver</a>  | <a href="#" class="contact anchor_footer">Kontakt</a>  | <span class="login"><a class="anchor_footer" href="#">Login</a></span></p>
 		    </div><!-- end #footer -->
 	    
 	    </div><!-- end #wrapper -->

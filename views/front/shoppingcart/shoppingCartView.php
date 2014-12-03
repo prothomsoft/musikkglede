@@ -103,7 +103,7 @@
 							<td>&nbsp;</td>
 						</tr>
 				</table>
-        		<?// shipPrice it also needs to be changed in jquery.musikkglede.js line 820
+        		<?// shipPrice it also needs to be changed in jquery.musikkgaver.js line 820
         		
         		
 				
